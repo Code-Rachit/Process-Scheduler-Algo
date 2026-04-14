@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OS Scheduling Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <canvas id="bg"></canvas>
+
+  <div class="container">
+
+    <header class="panel">
+      <img src="ims-logo.png" class="logo">
+
+      <div>
+        <h1>IMS Engineering College</h1>
+        <p>Professional CPU Scheduling Simulator</p>
+      </div>
+
+      <div class="toolbar">
+        <button onclick="toggleTheme()">Theme</button>
+        <button onclick="speakGuide()">Voice</button>
+        <button onclick="compareMode()">Compare</button>
+        <button onclick="exportJSON()">JSON</button>
+        <button onclick="exportCSV()">CSV</button>
+      </div>
+    </header>
+
+    <section class="panel">
+  <h2>Process Configuration Panel</h2>
+  <p>Enter total processes, choose algorithm, set quantum, then generate rows.</p>
+
+  <div class="grid">
+    <div>
+      <label>Total Processes</label>
+      <input id="n" type="number" min="1" max="12" value="4">
+    </div>
+
+    <div>
+      <label>Select Algorithm</label>
+      <select id="algo"></select>
+    </div>
+
+    <div>
+      <label>Time Quantum</label>
+      <input id="q" type="number" value="2">
+    </div>
+
+    <div>
+      <label>Generate Rows</label>
+      <button onclick="generateRows()">Generate</button>
+    </div>
+
+    <div>
+      <label>Add Process</label>
+      <button onclick="addRow()">Add</button>
+    </div>
+
+    <div>
+      <label>Run Simulation</label>
+      <button onclick="run()">Run</button>
+    </div>
+  </div>
+
+  <h3 style="margin-top:18px;">Process Entry Table</h3>
+
+  <div class="row headings">
+    <strong>Process ID</strong>
+    <strong>Arrival Time</strong>
+    <strong>Burst Time</strong>
+    <strong>Priority</strong>
+    <strong>Action</strong>
+  </div>
+
+  <div id="inputs"></div>
+</section>
+    <section id="stats" class="panel">
+  <h2>Performance Metrics</h2>
+</section>
+
+    <section id="table" class="panel">
+  <h2>Calculated Process Results</h2>
+</section>
+
+    <section class="panel">
+      <h2>Gantt Chart</h2>
+      <div id="gantt"></div>
+    </section>
+
+    <section id="history" class="panel">
+  <h2>Execution History & Comparison</h2>
+</section>
+
+    <footer class="footer">
+      Built by Rachit Sharma, in guidance of MS. Neha Rani
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
