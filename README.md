@@ -3,6 +3,8 @@
 
 # 🚀 OS Scheduling Simulator – Professional CPU Scheduling Visualizer
 
+# LIVE PROJECT LINK - https://process-scheduler-imsec.netlify.app
+
 A highly interactive, visually rich, and educational **Operating System Project** developed for B.Tech CSE students to simulate and compare major **CPU Scheduling Algorithms** in real time.
 
 This project transforms theoretical scheduling concepts into a practical visual experience through dynamic process tables, automatic calculations, performance metrics, animated Gantt charts, export tools, and a modern responsive UI.
